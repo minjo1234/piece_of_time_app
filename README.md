@@ -17,14 +17,20 @@ README.md
 # 2.Naming
 
 ### File and folder names
-
-- GNU Naming - All use lowercase letters, and _(underscore) is used between compound words (ex: main_frame, happy_house)
-- Function Name
-- Variable Name
-
+- snake_case
+- example -> `main_frame.dart`, `happy_house
 ### Function name
-
+- lowerCamelCase
+- example -> `loadUserData()`, `saveToFile()`
 ### Variable Name
+- lowerCamelCase
+- example -> `userName`, `itemCount`
+### Class Name
+- UpperCamelCase
+- example -> `UserProfile`, `MainScreen`
+### SCREAMING_SNAKE_CASE
+- SCREAMING_SNAKE_CASE
+- example -> `MAX_USERS`, `DEFAULT_TIMEOUT`
 
 # 3.Source file structure
 
