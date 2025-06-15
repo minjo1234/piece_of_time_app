@@ -51,3 +51,32 @@
 | Calendar UI  | `syncfusion_flutter_calendar` |
 
 ---
+
+
+🚀 MVP Features
+
+### 1. 📅 Schedule Management
+
+- Create, update, and delete plans
+- View schedules by day, week, or month
+
+### 2. 🗓️ Calendar Interface
+
+- Display user schedules
+- Add plans via modal dialog
+- Choose custom colors for plans
+
+### 3. 👥 Schedule Sharing
+
+- Share schedules with friends or family
+- View shared calendars
+
+### 4. 🌗 Appearance Settings
+
+- Light and dark mode support
+
+### 5. ⏰ Notifications & Widgets
+
+- Periodic alarms/reminders
+- iOS and Android home screen widgets
+- 
