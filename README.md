@@ -1,4 +1,4 @@
-📁 Project Structure
+## 📁 Project Structure
 
 ```bash
 /piece_of_time_app
@@ -17,13 +17,14 @@
 ----
 ## 🔤 Naming Convention
 
-|Element|Style|Example|
-|---|---|---|
-|Files/Folders|`snake_case`|`main_frame.dart`|
-|Functions|`lowerCamelCase`|`loadUserData()`|
-|Variables|`lowerCamelCase`|`userName`, `itemCount`|
-|Classes|`UpperCamelCase`|`UserProfile`, `MainScreen`|
-|Constants|`SCREAMING_SNAKE_CASE`|`MAX_USERS`|
+| Element       | Style                  | Example                     |
+| ------------- | ---------------------- | --------------------------- |
+| Files/Folders | `snake_case`           | `main_frame.dart`           |
+| Functions     | `lowerCamelCase`       | `loadUserData()`            |
+| Variables     | `lowerCamelCase`       | `userName`, `itemCount`     |
+| Classes       | `UpperCamelCase`       | `UserProfile`, `MainScreen` |
+| Constants     | `SCREAMING_SNAKE_CASE` | `MAX_USERS`                 |
+
 🔗 [Reference - Naming Guide](https://dalgonakit.tistory.com/115)
 
 
