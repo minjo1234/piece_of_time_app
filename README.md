@@ -72,3 +72,38 @@ README.md
 # References
 
 - [Naming - folders and files ](https://dalgonakit.tistory.com/115)
+
+
+---
+
+# MVP 
+
+###  1.📅 Schedule Management
+
+- Create, update, and delete plans 
+- View schedule by day/week/month 
+
+---
+###  2.🗓️ Calendar Interface 
+
+- Display user schedules 
+- Add plans via modal dialog 
+- Choose custom colors for schedule items
+
+---
+###  3.👥 Schedule Sharing
+
+- Share schedules with friends or family
+- View shared events in calendar
+
+---
+### 4. 🌗 Appearance Settings
+
+- Support for light and dark mode
+
+---
+
+### 5. ⏰ Notifications & Widgets
+
+- Set Periodic alarms/reminders
+- Support for IOS & Android home screen widgets 
