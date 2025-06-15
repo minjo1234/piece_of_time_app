@@ -14,11 +14,10 @@
 
 # 2.Naming 
 
-GNU Naming - All use lowercase letters, and _(underscore) is used between
-compound words (ex: main_frame, happy_house)
- 
 ### File and folder names
-
+    - GNU Naming - All use lowercase letters, and _(underscore) is used between compound words (ex: main_frame, happy_house)
+    - Function Name 
+    - Variable Name 
 ### Function name
 
 ### Variable Name 
