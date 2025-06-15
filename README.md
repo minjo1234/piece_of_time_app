@@ -14,6 +14,9 @@
 
 # 2.Naming 
 
+GNU Naming - All use lowercase letters, and _(underscore) is used between
+compound words (ex: main_frame, happy_house)
+ 
 ### File and folder names
 
 ### Function name
@@ -24,3 +27,8 @@
 
 
 
+
+
+
+# References 
+[flutter naming ](https://dalgonakit.tistory.com/115)
