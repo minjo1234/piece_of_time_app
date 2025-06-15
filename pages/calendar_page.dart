@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:post_app/screens/calendar_screen.dart';
+import 'package:post_app/utils/functions.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class CalendarPage extends StatelessWidget {
@@ -26,7 +28,7 @@ class CalendarPage extends StatelessWidget {
             final selectedDate = calendarTapDetails.date!;
             showDialog(
               context: context,
-              builder: (context) => _buildPlanDialog(context, selectedDate),
+              builder: (context) => showMainPlanDialog(context, selectedDate),
             );
           }
         },
@@ -35,32 +37,90 @@ class CalendarPage extends StatelessWidget {
   }
 }
 
-Widget _buildPlanDialog(BuildContext context, DateTime date) {
+Widget showMainPlanDialog(BuildContext context, DateTime date) {
+  return AlertDialog(
+    title: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "${date.month}월 ${date.day}일 (${getWeekday(date.weekday)}) ",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1,
+          ),
+        ),
+        Text(getDDay(date), style: TextStyle(fontSize: 12)),
+      ],
+    ),
+    content: SizedBox(
+      width: 300,
+      height: 400,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+            dayScheduleBox(
+              'clean my room 08:00–11:00',
+              '일상',
+              Color(0xFF91B5F3),
+              Color(0xFFEDEFFF),
+            ),
+          ],
+        ),
+      ),
+    ),
+    actions: [],
+  );
+}
+
+void insertPlanDialog(BuildContext context, DateTime date) {
   final TextEditingController _controller = TextEditingController();
 
-  return AlertDialog(
-    title: Text("${date.month}월 ${date.day}일 계획 추가"),
-    content: TextField(
-      controller: _controller,
-      decoration: const InputDecoration(hintText: "무엇을 할 건가요?"),
-    ),
-    actions: [
-      TextButton(
-        onPressed: () => Navigator.pop(context),
-        child: const Text("취소"),
-      ),
-      ElevatedButton(
-        onPressed: () {
-          final text = _controller.text;
-          if (text.isNotEmpty) {
-            // 👉 TODO: 저장 로직 (예: setState or add to dataSource)
-            print("📅 $date: $text");
-          }
-          Navigator.pop(context);
-        },
-        child: const Text("저장"),
-      ),
-    ],
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: Text("${date.month}월 ${date.day}일 계획 추가"),
+        content: TextField(controller: _controller),
+        actions: [],
+      );
+    },
   );
 }
 
