@@ -53,7 +53,7 @@
 ---
 
 
-🚀 MVP Features
+## 🚀 MVP Features
 
 ### 1. 📅 Schedule Management
 
@@ -79,4 +79,3 @@
 
 - Periodic alarms/reminders
 - iOS and Android home screen widgets
-- 
