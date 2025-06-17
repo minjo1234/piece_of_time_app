@@ -44,11 +44,12 @@
 ---
 ## 🌐 Libraries Used
 
-| Purpose      | Libraries                     |
-| ------------ | ----------------------------- |
-| Localization | `flutter_localizations`       |
-| User State   | `shared_preferences`          |
-| Calendar UI  | `syncfusion_flutter_calendar` |
+| Purpose       | Libraries                             |
+| ------------- | ------------------------------------- |
+| Localization  | `flutter_localizations`               |
+| User State    | `shared_preferences`                  |
+| Calendar UI   | `syncfusion_flutter_calendar`         |
+| Notifications | flutter_local_notifications, timezone |
 
 ---
 
