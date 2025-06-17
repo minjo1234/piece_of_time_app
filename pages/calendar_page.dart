@@ -9,29 +9,39 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SfCalendar(
-        headerDateFormat: 'MMM',
-        headerStyle: CalendarHeaderStyle(
-          backgroundColor: Colors.transparent,
-          textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 5),
+        width: double.infinity,
+        height: 500,
+        child: SfCalendar(
+          headerDateFormat: 'MMM',
+          headerStyle: CalendarHeaderStyle(
+            backgroundColor: Colors.transparent,
+            textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          ),
+          headerHeight: 50,
+          cellBorderColor: Colors.transparent,
+          view: CalendarView.month,
+          selectionDecoration: const BoxDecoration(),
+          dataSource: _getCalendarDataSource(),
+          todayHighlightColor: Colors.tealAccent,
+          monthViewSettings: const MonthViewSettings(
+            appointmentDisplayMode:
+                MonthAppointmentDisplayMode.appointment, // boxes append options
+            showAgenda: false,
+          ),
+
+          onTap: (calendarTapDetails) {
+            if (calendarTapDetails.targetElement ==
+                CalendarElement.calendarCell) {
+              final selectedDate = calendarTapDetails.date!;
+              showDialog(
+                context: context,
+                builder: (context) => showMainPlanDialog(context, selectedDate),
+              );
+            }
+          },
         ),
-        headerHeight: 50,
-        cellBorderColor: Colors.transparent,
-        view: CalendarView.month,
-        selectionDecoration: const BoxDecoration(),
-        dataSource: _getCalendarDataSource(),
-        todayHighlightColor: Colors.tealAccent,
-        monthViewSettings: const MonthViewSettings(showAgenda: true),
-        onTap: (calendarTapDetails) {
-          if (calendarTapDetails.targetElement ==
-              CalendarElement.calendarCell) {
-            final selectedDate = calendarTapDetails.date!;
-            showDialog(
-              context: context,
-              builder: (context) => showMainPlanDialog(context, selectedDate),
-            );
-          }
-        },
       ),
     );
   }
@@ -110,14 +120,14 @@ Widget showMainPlanDialog(BuildContext context, DateTime date) {
 }
 
 void insertPlanDialog(BuildContext context, DateTime date) {
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
 
   showDialog(
     context: context,
     builder: (context) {
       return AlertDialog(
         title: Text("${date.month}월 ${date.day}일 계획 추가"),
-        content: TextField(controller: _controller),
+        content: TextField(controller: controller),
         actions: [],
       );
     },

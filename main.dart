@@ -5,6 +5,8 @@ import 'package:post_app/data/notifiers.dart';
 import 'package:post_app/data/titles.dart';
 import 'package:post_app/pages/main_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:timezone/timezone.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +15,7 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
   State<MyApp> createState() => _MyAppState();
 }
 
@@ -38,7 +41,7 @@ class _MyAppState extends State<MyApp> {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: Titles.appName,
-          color: Theme.of(context).colorScheme.onBackground,
+          color: Theme.of(context).colorScheme.onSurface,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: const Color.fromARGB(255, 12, 14, 14),
