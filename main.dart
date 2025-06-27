@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:post_app/data/constants.dart';
 import 'package:post_app/data/notifiers.dart';
 import 'package:post_app/data/titles.dart';
@@ -20,6 +21,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late PersistentTabController _controller;
+
   @override
   void initState() {
     initThemeMode();

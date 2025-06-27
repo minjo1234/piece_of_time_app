@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:post_app/data/constants.dart';
 import 'package:post_app/data/notifiers.dart';
-import 'package:post_app/pages/widgets/setting/setting_widget.dart';
+import 'package:post_app/pages/setting_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingPage extends StatelessWidget {
